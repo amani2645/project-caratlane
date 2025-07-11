@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .navbar-container{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%; 
+      background-color: white;
+       position: fixed;
+        z-index: 1030;
+       top: 0;
+       padding: 15px;
+     }
+    .right-logo .icon{
+      display: flex;
+      align-items: center;
+    }
+    .icon img{
+      margin-right: 20px;
+      margin-left: -34px;
+    }
+    .bar{ 
+        font-family: sans-serif;
+        height: 27px;
+        border-color: #ff1aff;
+        border-width: thin;
+        border-style: solid;
+        width: 150%;
+        background-color:whitesmoke;
+        border-radius: 10px;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 5px 5px 280px;   
+    }
+    .bar span{
+      color: #6d386d;
+      font-size: small;
+      margin-left: -260px;
+    }
+    .bar .fa-magnifying-glass{
+      color: white;
+       background: linear-gradient(90deg, rgba(207, 92, 230, 1) 0%, rgba(172, 111, 242, 1) 55%, rgba(127, 76, 237, 1) 100%);
+      padding: 9px 14px 13px 15px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-right: -20px;
+    }
+    .store{
+      display: flex;
+    }
+    .purple{
+      font-family: sans-serif;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #6d386d;
+      border-style: solid;
+      border-width: thin;
+      border-color: #ff1aff;
+      padding: 8px;
+      border-radius: 10px;
+      background-color: #fbf2fb;
+      margin-right: 10px;
+      margin-left: -50px;
+    }
+    .purple img{
+      margin-right: 10px;
+    }
+    .orange{
+      font-family: sans-serif;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #6d386d;
+      border-style: solid;
+      border-width: thin;
+      border-color: #f07307;
+      padding: 7px;
+      border-radius: 10px;
+      background-color: #f8f4f1;
+      margin-right: 10px;
+    }
+    .orange img{
+      margin-right: 10px;
+    }
+    .gold{
+      padding: 8px;
+      border-style: solid;
+      border-width: thin;
+      border-color:#9c8506;
+      border-radius: 10px;
+      background-color: #f2ebc3;
+    }
+    .gray{
+      font-size: 0.7rem;
+      font-family: sans-serif;
+      color: rgb(125, 125, 125);
+    }
+    .pink{
+      font-size: 0.7rem;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: #fd63fd;
+    }
+    .del{
+      display: flex;
+      flex-direction: column;
+      margin-right: -100px;
+      margin-left: 20px;
+    }
+    .left-cart i{
+      margin-left: 20px;
+      justify-content: space-evenly;
+    }
+    .Flag-India{
+      margin-left: 40px;
+      border-color: black;
+      border-style:solid;
+      border-width: thin;
+    }
+     .navbar-collection-container{
+        background-color: #564067;
+        display: flex;
+        justify-content: space-between; 
+        padding:9px ;    
+        color: white;
+        font-family: sans-serif;
+        font-size:0.9rem;
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 15px;
+         position: fixed;
+        z-index: 1030;
+        top: 55px;
+    }
+    .collection-container{
+        margin-top: 10px;
+    }
+    .collection-container span{
+        padding:10px;
+    }
+    .services{
+        border-radius: 10px;
+        border-style: solid;
+        border-color: white;
+        border-width: thin;
+        margin-right: 35px;
+        padding: 7px 10px ;
+        background-color: #724f8e;
+        width: 80px;
+    }
+    .services .fa-angle-down{
+        font-size: 0.5rem;
+    }
+       /* 3rd frame  */
+       .collec-container{
+        display: flex;
+        
+    }
+    .thursday img{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-left: 10px;
+        
+      }
+    .full-collection img{
+        display: flex;
+        width: 150px;
+        height: 150px;
+        margin-left: 60px;
+        border-radius: 15px;
+         margin-top: 20px;
+         margin-bottom: 10px;
+        
+    }
+    .full-collection{ 
+        width: 760px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: #D1C4FF;
+        background: linear-gradient(174deg, rgba(209, 196, 255, 0.99) 0%, rgba(227, 218, 255, 1) 50%, rgb(246, 246, 249) 100%);  
+    }
+    .full-collection .studs{
+        display: flex;
+        margin-right: 20px;
+
+    }
+    .full-collection span{
+        margin-left: 80px;
+        font-family: sans-serif;
+    }
+    .dark{
+        font-weight: bold;
+        font-size: 1.0rem;
+    }
+    .light{
+        font-size: 0.9rem;
+        color:#bab8c6 ;
+    }
+    .full{
+        display: flex;
+        justify-content: space-between;
+        margin-top:60px;
+    }
+    .full .fa-arrow-left{
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+        margin-left: -40px;
+        margin-right: -55px;
+        }
+      .full .fa-arrow-right{
+        background-color: #352341;
+        border-radius: 50%;
+        color: white;
+        padding: 10px;
+        }
+        .view{
+            background-color: #352341;
+            border-radius: 10px;
+            padding: 15px;
+            width: 150px;
+            color: white;
+            margin-right: 30px;
+            
+        }
+    /* 4th frame shaya */
+    
+        .shaya-container{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .gold-container img{
+            width: 720px;
+            border-radius: 10px 10px;
+            margin-left: 30px;
+            margin-bottom: 20px;
+            
+            
+        }
+        .silver-container img{
+            border-radius: 10px;
+            width: 720px;
+            margin-left: 20px;
+        }
+    /* wrapped with love */
+     .love-container{
+            display: flex;
+            background-color: #faf7fc;
+            border-radius: 10px;
+            border-color: #ecd8f9;
+            border-style: solid;
+            justify-content: space-evenly;
+            font-family: sans-serif;
+            color: #352341;
+            font-weight: bold;
+            padding: 30px;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+        .six{
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 20px;
+        }
+        .six img{
+            width: 170px;
+            font-size: 1.0rem;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+        .love{
+            font-size: 1.2rem;
+            margin-right: 120px;
+            text-align: center;
+        } 
+        .love img{
+            width: 130px;
+            align-items: center;
+        
+        }
+        .six a{
+            text-decoration: none;
+            text-align: center;
+           }
+       
+           /* warranty */
+             .warranty{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #f8f6f9;
+            font-family: sans-serif;
+            color: #352341;
+            font-weight: bold;
+            width: 100%;
+            padding: 20px;  
+        }
+        .day{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 30px;
+        }
+        .day-con {
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+            margin-right: 30px;
+        }
+        .day span{
+            margin-top: 20px;
+        }
+        .day-con span{
+            margin-left: 20px;
+        }
+        .cer{
+            border-radius: 50%;
+            background-color: #e9fadd;
+            padding: 5px;
+        }
+        .day-con img{
+            border-radius: 50%;    
+        }
+        .life{
+            background-color: #fff8c9;
+            padding: 5px;
+        } 
+        .war{
+            background-color: #ffe1e3;
+            padding: 5px;
+            margin-top: 10px;
+            margin-right: 5px; 
+            border-radius: 50%;
+        }
+        .ex{
+            padding: 3px;
+            background-color: #dee9fe;
+            border-radius: 50%;
+            margin-right: 5px;
+            height: 30px;
+            margin-top: 10px;
+        }
+        /* enrol */
+         .silver-container iframe{
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+        
+
+        /* =====================video======================= */
+ .video{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+            
+        }
+       .video img{
+        border-radius: 10px;
+        margin-left: 10px;
+       }
+        .angle-left{
+        border-radius: 50%;
+        background-color: whitesmoke;
+        font-size: 30px;
+        font-weight: lighter;
+        transform: translate(65px, 0px);
+        color: rgb(99, 64, 132);
+        padding: 18px;
+        }  
+        .angle-right{
+         border-radius: 50%;
+        background-color: whitesmoke;
+        font-size: 30px;
+        font-weight: lighter;
+        transform: translate(-60px, 0px);
+        color: rgb(99, 64, 132);
+        padding: 18px;
+        }
+        /* ====================== */
+        .final{
+          margin-bottom: 50px;
+          
+        }
+        .final-con{
+          
+        }
+        .customer-service i{
+        border-radius: 50%;
+        background-color: #6c0fad;
+        width: 15px;
+        color: white;
+        padding: 15px;
+        font-size: 1.0rem;
+        align-items: center;
+        position: fixed;
+        z-index: 1030;
+        bottom: 60px;
+        right: 50px;
+        transform: translate(180);
+    }
+
+  </style>
+    
+</head>
+<body>
+  <div class="final-con">
+  <div class="navbar-container">
+    <div class="right-logo">
+      <div class="icon">
+        <img src="https://i.tracxn.com/logo/company/687ec53cbc52e171b93f8aae7444fe79" alt="" width=6%>  
+     
+     <div class="bar"> 
+            <span>Search</span>
+            
+            <i class="fa-solid fa-magnifying-glass"></i></div>
+    </div>
+  </div>
+    <div class="store" >  
+      <div class="purple">
+       <img  src="./Treasure-Chest-1-26-may-25 (1).png" width="20px" alt=""> <span>Tresure chest</span></div>
+       <div class="orange">
+    <img  src="https://caratlane-live-product-images.s3.ap-south-1.amazonaws.com/media/static/images/discovery/responsive-hamburger-menu/products-and-services/fis-1x.png" alt="" width="20px"><span>Stores</span></div>
+    <img class="gold" src="https://cdn.caratlane.com/static/images/discovery/responsive-hamburger-menu/egold-1x.png" alt="">
+    
+      
+    </div>
+    
+      <div class="del">
+        <span class="gray">Delivery & Stores</span>
+        <span class="pink"> Enter Pincode</span></div>
+        <div class="left-cart">
+        <img class="Flag-India" src="https://cdn.britannica.com/97/1597-050-008F30FA/Flag-India.jpg" width="30px" height="17px" alt="" >
+        <a href="">
+        <i class="fa-solid fa-user"></i>
+    </a>
+    <a href="">
+        <i class="fa-solid fa-heart"></i>
+    </a>
+    <a href="">
+        <i class="fa-solid fa-cart-shopping"></i>
+        
+    </a>
+    
+    </div>
+  </div>
+  </div><div class="final-con">
+      <div class="navbar-collection-container">
+        <div class="collection-container">
+            <span>Rings</span>
+            <span>Earrings</span>
+            <span>Bracelets & Bangles</span>
+            <span>Solitaires</span>
+            <span>Mangalsutras</span>
+            <span>Necklaces & Pendants</span>
+            <span>More Jewellery</span>
+            <span>Silver by Shaya</span>
+            <span>Gifting</span>
+            <span>Trending</span>
+            <span>Collections</span>
+        </div>
+        <div class="services"><span>Services</span>
+           <i class="fa-solid fa-angle-down"></i>
+        </div>
+    </div>
+    </div>
+    <div class="final">
+       <div class="video">
+    <div class="angle-left">   
+        <i class="fa-solid fa-angle-left"></i></div>
+        <div>
+       <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/bundleoffer_1/02/Desktop_1760x630.jpg" width="1470px" height="500px" alt="Bundle Offer" ></div>
+      <div class="angle-right"> <i class="fa-solid fa-angle-right"></i></div>
+    </div>
+    </div>
+    <div class="final">
+   <div class="collec-container">
+        <div class="thursday">
+            <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/07_JULY/Banner/ThursdayTrendsetter/01/Desktop.jpg" alt="" width="750px" height="360px">
+        </div>
+        <div class="full-collection">
+            <div class="studs">
+               <div><img src="https://cdn.caratlane.com/media/catalog/product/J/E/JE04319-YGP900_1_lar.jpg" width="200px" height="200px" alt="">
+                <span class="dark">&#8377 80,025</span><br>
+                <span class="light">Diamond stud Ear...</span></div>
+        
+                <div><img src="https://www.truesilver.co.in/cdn/shop/files/1_585dfedd-484c-42a7-a690-0d47886277d4.jpg?v=1719040616" alt="" width="200px" height="200px"><span class="dark">&#8377 1,15,000</span><br>
+                    <span class="light">Screw Back St..</span></div>
+                    <div>
+                <img src="https://www.larsenjewellery.com.au/wp-content/uploads/2021/11/Lily-Diamond-Studs-WG3.jpg" alt="" width="200px" height="200px"><span class="dark">&#8377 90,250</span><br><span class="light">Diamond Earrings</span></div>
+                <div>
+                <img src="https://www.kalyanjewellers.net/images/Jewellery/Earrings/images/Brazen-Conch-Gold-Earrings.jpeg" alt="" width="200px" height="200px">
+                <span class="dark">&#8377 75,125</span><br><span class="light">New</span></div>
+            </div>
+            <div class="full">
+                <div>
+                    <span><i class="fa-solid fa-arrow-left"></i></span>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+                <span class="view">View Full Collection</span>
+
+            </div>
+        </div>
+    </div>
+    </div><div class="final">
+    <div class="shaya-container">
+    <div class="silver-container">
+        <img src=" https://cdn.caratlane.com/media/static/images/V4/2025/Shaya/06-June/26/Responsive_2.png" alt="">
+       
+    </div>
+    <div class="gold-container">
+        <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/22kt/02/Desktop_1740x850.jpg" alt="">
+        <img src=" https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/9kt/02/3Way_Desktop_1.jpg" alt="">
+        </div>
+   </div>
+   </div> <div class="final">
+   <div class="love-container">
+        <div class="love">
+        <img src="https://assets.cltstatic.com/images/responsive/hp/hp-asset1.png" alt="">
+        <p>Wrapped with Love</p>
+        </div>
+        <div class="six">
+            <a href="">
+            <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/6_Tiles/01/01_Desktop.jpg" alt="">
+            <p>STACK 'N' GO RINGS</p></a>
+            <a href="">
+            <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/6_Tiles/01/02_Desktop.jpg" alt="">
+            <p>DAY-TO-DAY BRACELETS</p></a>
+            <a href="">
+            <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/6_Tiles/01/03_Desktop.jpg" alt="">
+            <p>SALITAIRE EARRINGS</p></a>
+            <a href="">
+            <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/6_Tiles/01/04_Desktop.jpg" alt="">
+            <p>EVERYDAY CHAINS</p></a>
+            <a href="">
+            <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/6_Tiles/01/05_Desktop.jpg" alt="">
+            <p>GO-TO PENDANTS</p></a>
+            <a href="">
+            <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/6_Tiles/01/06_Desktop.jpg" alt="">
+            <p>STYLE PICKS UNDER 75K</p>
+            </a>
+        </div>
+    </div>
+    </div><div class="final">
+ <div class="warranty">
+        <div class="day">
+        <img class="ex" src="https://www.svgrepo.com/show/447714/money-refund-rupee.svg" width="30px" alt="">
+        <span>15 Day Exchange</span></div>
+        <div class="day">
+            <img class="war" src="https://tepo.app/cdn/shop/products/1-year-warranty-free-png.webp?v=1705315125" width="25px" height="25px" alt="">
+            <span>1 Year warranty</span>
+        </div>
+        <div class="day-con">
+            <img class="cer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVvlrBgqLzHxKSpa94FkKsqXCNfN-8rMD4lA&s" width="20px" height="20px" alt="">
+            <span>100% Certified</span>
+        </div>
+        <div class="day-con">
+            <img class="life" src="https://i.pinimg.com/564x/c4/3e/79/c43e799e8937796674e893c67f67152e.jpg" width="20px" height="20px" alt="">
+            <span>Lifetime Exchange</span>
+        </div>
+    </div>
+    </div><div class="final">
+       <div class="shaya-container">
+        <div class="silver-container">
+            <iframe src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/06_JUNE/Banner/treasure_chest/01/3way_desktop.mp4 " width="720px" height="730px" frameborder="0"></iframe>
+        </div>
+        <div class="gold-container">
+            <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/05_MAY/Banner/Oceanic/02/Desktop_1740x850_1.jpg" alt="">
+            <img src="https://cdn.caratlane.com/media/static/images/V4/2025/CL/05_MAY/Banner/Runway/03/Desktop_1740x850.jpg" alt="">
+        </div>
+    </div>
+    </div>
+       <div class="customer-service">
+<i class="fa-solid fa-phone-volume"></i>
+    </div>
+
+
+</body>
+</html>
